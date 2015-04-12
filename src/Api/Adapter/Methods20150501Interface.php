@@ -63,9 +63,9 @@ interface Methods20150501Interface extends MethodsInterface
      * @param      string $query search string
      * @param      string $searchType search type (optional)
      *                                         (contextual or phrase)
-     * @param      int $merchantcategoryId limit search to merchantcategory (optional)
+     * @param      string $ean limit search to EAN (optional)
      * @param      string $region limit search to region (optional)
-     * @param      int $categoryId limit search to categorys (optional)
+     * @param      int $merchantcategoryId limit search to merchantcategory (optional)
      * @param      array $programId limit search to program list of
      *                                         programs (optional)
      * @param      boolean $hasImages products with images (optional)
@@ -82,9 +82,9 @@ interface Methods20150501Interface extends MethodsInterface
     public function searchProducts(
         $query,
         $searchType = 'phrase',
-        $merchantcategoryId = NULL,
+        $ean = NULL,
         $region = NULL,
-        $categoryId = NULL,
+        $merchantcategoryId = NULL,
         $programId = array(),
         $hasImages = true,
         $minPrice = 0,
