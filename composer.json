@@ -38,6 +38,10 @@
             "name": "Adam Kuśmierz",
             "email": "adam@kusmierz.be",
             "role": "Author"
+        },
+        {
+            "name": "Giacomo Barbalinardo",
+            "email": "info@ready24it.eu"
         }
     ],
     "require": {
