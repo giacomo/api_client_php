@@ -65,7 +65,8 @@ interface Methods20150501Interface extends MethodsInterface
      *                                         (contextual or phrase)
      * @param      string $ean limit search to EAN (optional)
      * @param      string $region limit search to region (optional)
-     * @param      int $merchantcategoryId limit search to merchantcategory (optional)
+     * @param      int $merchantCategoryId limit search to
+     *                                         merchant category (optional)
      * @param      array $programId limit search to program list of
      *                                         programs (optional)
      * @param      boolean $hasImages products with images (optional)
@@ -84,7 +85,7 @@ interface Methods20150501Interface extends MethodsInterface
         $searchType = 'phrase',
         $ean = NULL,
         $region = NULL,
-        $merchantcategoryId = NULL,
+        $merchantCategoryId = NULL,
         $programId = array(),
         $hasImages = true,
         $minPrice = 0,
