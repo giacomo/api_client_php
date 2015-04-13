@@ -103,8 +103,9 @@ class Methods20150501 extends AbstractApiMethods implements Methods20150501Inter
      * @param      string $query search string
      * @param      string $searchType search type (optional)
      *                                         (contextual or phrase)
+     * @param      string $ean
      * @param      string $region limit search to region (optional)
-     * @param      int $categoryId limit search to categorys (optional)
+     * @param      int $merchantCategoryId limit search to categorys (optional)
      * @param      array $programs limit search to program list of
      *                                         programs (optional)
      * @param      boolean $hasImages products with images (optional)
@@ -121,8 +122,9 @@ class Methods20150501 extends AbstractApiMethods implements Methods20150501Inter
     public function searchProducts(
         $query,
         $searchType = 'phrase',
+        $ean = NULL,
         $region = NULL,
-        $categoryId = NULL,
+        $merchantCategoryId = NULL,
         $programs = array(),
         $hasImages = true,
         $minPrice = 0,
