@@ -3,7 +3,7 @@
 namespace Zanox\Api\Adapter\Soap;
 
 use Zanox\Api\AbstractApiMethods;
-use Zanox\Api\Adapter\Methods20110301Interface;
+use Zanox\Api\Adapter\Methods20150501Interface;
 use Zanox\Api\Constants as ApiConstants;
 
 /**
