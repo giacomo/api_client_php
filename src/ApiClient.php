@@ -6,6 +6,7 @@ use Traversable;
 use Zanox\Api\AbstractApiMethods;
 use Zanox\Api\Adapter\Methods20090701Interface;
 use Zanox\Api\Adapter\Methods20110301Interface;
+use Zanox\Api\Adapter\Methods20150501Interface;
 use Zanox\Api\ClientException;
 use Zanox\Api\Constants;
 use Zanox\Api\MethodsInterface;
@@ -156,10 +157,12 @@ abstract class ApiClient
         Constants::SOAP_INTERFACE => array(
             Constants::VERSION_2009_07_01 => '\Zanox\Api\Adapter\Soap\Methods20090701',
             Constants::VERSION_2011_03_01 => '\Zanox\Api\Adapter\Soap\Methods20110301',
+            Constants::VERSION_2015_05_01 => '\Zanox\Api\Adapter\Soap\Methods20150501',
         ),
         Constants::RESTFUL_INTERFACE => array(
             Constants::VERSION_2009_07_01 => '\Zanox\Api\Adapter\Rest\Methods20090701',
             Constants::VERSION_2011_03_01 => '\Zanox\Api\Adapter\Rest\Methods20110301',
+            Constants::VERSION_2015_05_01 => '\Zanox\Api\Adapter\Rest\Methods20150501',
         ),
     );
 
@@ -241,7 +244,7 @@ abstract class ApiClient
         unset($options['interface']);
         unset($options['version']);
 
-        /** @var MethodsInterface|Methods20110301Interface|Methods20090701Interface|AbstractApiMethods $adapter */
+        /** @var MethodsInterface|Methods20150501Interface|Methods20110301Interface|Methods20090701Interface|AbstractApiMethods $adapter */
         $adapter = new $class($protocol, $version);
 
         if (!$adapter instanceof MethodsInterface) {
