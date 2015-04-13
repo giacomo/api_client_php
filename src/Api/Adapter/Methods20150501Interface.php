@@ -95,6 +95,17 @@ interface Methods20150501Interface extends MethodsInterface
         $items = 10
     );
 
+    /**
+     * Get merchant categories.
+     *
+     * @param      int $programId program admedium categories
+     *
+     * @category   nosignature
+     *
+     * @return     object or string            list of merchant categories
+     */
+    public function getMerchantCategories($programId);
+
 
     /**
      * Get single incentive.

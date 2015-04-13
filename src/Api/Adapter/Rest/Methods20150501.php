@@ -138,8 +138,9 @@ class Methods20150501 extends AbstractApiMethods implements Methods20150501Inter
 
         $parameter['q'] = $query;
         $parameter['searchType'] = $searchType;
+        $parameter['ean'] = $ean;
         $parameter['region'] = $region;
-        $parameter['category'] = $categoryId;
+        $parameter['merchantcategory'] = $merchantCategoryId;
         $parameter['programs'] = implode(",", $programs);
         $parameter['hasImages'] = $hasImages;
         $parameter['minPrice'] = $minPrice;
@@ -152,6 +153,31 @@ class Methods20150501 extends AbstractApiMethods implements Methods20150501Inter
         $this->setSecureApiCall(false);
 
         $result = $this->doRestfulRequest($resource, $parameter);
+
+        if ($result) {
+            return $result;
+        }
+
+        return false;
+    }
+
+    /**
+     * Get merchant categories.
+     *
+     * @param      int $programId program admedium categories
+     *
+     * @category   nosignature
+     *
+     * @return     object or string            list of merchant categories
+     */
+    public function getMerchantCategories($programId)
+    {
+        $resource = array('products', 'merchantcategories', 'program', $programId);
+
+        $this->setRestfulAction(ApiConstants::GET);
+        $this->setSecureApiCall(false);
+
+        $result = $this->doRestfulRequest($resource);
 
         if ($result) {
             return $result;
