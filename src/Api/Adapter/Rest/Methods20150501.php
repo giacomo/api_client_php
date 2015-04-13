@@ -172,12 +172,14 @@ class Methods20150501 extends AbstractApiMethods implements Methods20150501Inter
      */
     public function getMerchantCategories($programId)
     {
-        $resource = array('products', 'merchantcategories', 'program', $programId);
+        $resource = array('products', 'merchantcategories');
+
+        $parameter['program'] = $programId;
 
         $this->setRestfulAction(ApiConstants::GET);
         $this->setSecureApiCall(false);
 
-        $result = $this->doRestfulRequest($resource);
+        $result = $this->doRestfulRequest($resource, $parameter);
 
         if ($result) {
             return $result;
