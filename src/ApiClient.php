@@ -179,7 +179,7 @@ abstract class ApiClient
      * </code>
      *
      * @param array $options
-     * @return MethodsInterface|Methods20110301Interface|Methods20090701Interface|AbstractApiMethods
+     * @return MethodsInterface|Methods20150501Interface|Methods20110301Interface|Methods20090701Interface|AbstractApiMethods
      * @throws \Zanox\Api\ClientException
      */
     public static function factory(array $options = array())
